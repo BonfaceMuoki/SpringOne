@@ -13,9 +13,11 @@ public class App
     public static void main( String[] args )
     {
         //FormOne fone = new FormOne();
+        SchoolForm form;
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        FormOne fone =(FormOne) context.getBean("f_one");
-        fone.printFormLabel();
+        form = (SchoolForm) context.getBean("f_one");
+        // fone.printFormLabel();
+        form.printFormLabel();
         System.out.println( "Hello World!" );
     }
 }
