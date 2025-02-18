@@ -3,11 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+    <bean id="school" class="com.bonaet.School">
+         <property name="form" ref="f_one"></property>
+    </bean>
     <bean id="f_one" class="com.bonaet.FormOne" primary="true">
-
+        <constructor-arg index="0" value="Form One"></constructor-arg>
     </bean>
     <bean id="f_two" class="com.bonaet.FormTwo">
-
+<property name="label" value="Form Two"></property>
     </bean>
 </beans>
